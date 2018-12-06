@@ -1,0 +1,26 @@
+{
+  "name": "@parse/qiniu-files-adapte",
+  "version": "0.0.1",
+  "description": "qiniu adapter for parse-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xugy0926/parse-server-qiniu-adapter.git"
+  },
+  "author": "xugaoyang <i@xugaoyang.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xugy0926/parse-server-qiniu-adapter/issues"
+  },
+  "homepage": "https://github.com/xugy0926/parse-server-qiniu-adapter#readme",
+  "dependencies": {
+    "qiniu": "^7.2.1"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0"
+  }
+}
