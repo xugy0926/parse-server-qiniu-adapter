@@ -30,8 +30,7 @@ function QiniuAdapter() {
 }
 
 QiniuAdapter.prototype.uploadToken = function() {
-  const putPolicy = new qiniu.rs.PutPolicy({ scope: this._bucket })
-  return putPolicy.uploadToken(this._mac)
+  return this._putPolicy.uploadToken(this._mac)
 }
 
 QiniuAdapter.prototype.createFile = function(filename, data, contentType) {
@@ -55,7 +54,7 @@ QiniuAdapter.prototype.createFile = function(filename, data, contentType) {
   })
 }
 
-QiniuAdapter.prototype.deleteFile = function(filename,) {
+QiniuAdapter.prototype.deleteFile = function(filename) {
   return new Promise((resolve, reject) => {
     this._bucketManager.delete(this._bucket, filename, function(err, respBody, respInfo) {
       if (err) {
@@ -67,7 +66,7 @@ QiniuAdapter.prototype.deleteFile = function(filename,) {
   })
 }
 
-QiniuAdapter.prototype.getFileData = function(filename,) {
+QiniuAdapter.prototype.getFileData = function(filename) {
   return new Promise((resolve) => {
     //TODO
     resolve()
@@ -75,7 +74,7 @@ QiniuAdapter.prototype.getFileData = function(filename,) {
 }
 
 QiniuAdapter.prototype.getFileLocation = function(config, filename) {
-  return `${config.privateUrl}/${filename}`;
+  return `${this._privateUrl}/${filename}`;
 }
 
 module.exports = QiniuAdapter
