@@ -11,7 +11,8 @@
       bucket: '', //required
       accessKey: '', // required
       secretKey: '' //required,
-      region: ''
+      region: '',
+      privateUrl: ''
     }
   }
 }
