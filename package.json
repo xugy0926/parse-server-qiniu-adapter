@@ -1,5 +1,5 @@
 {
-  "name": "@parse/qiniu-files-adapte",
+  "name": "@parse/qiniu-files-adapter",
   "version": "0.0.1",
   "description": "qiniu adapter for parse-server",
   "main": "index.js",
